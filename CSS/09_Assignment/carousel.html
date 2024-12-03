@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignement Carousel</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            /* border: 3px red solid; */
+            background-color: #1a1a1a;
+            color: wheat;
+        }
+
+        .card-container {
+            background-color: whitesmoke;
+            padding: 40px;
+            justify-content: center; 
+            object-fit: fill;
+        }
+
+        
+
+
+      .card{
+        border: greenyellow solid 2px;
+        margin: 5px;
+        padding: 20px;
+        width: auto;
+        align-items: center;
+        justify-content: center;
+        
+      }
+       
+      .image
+      {
+        object-fit: contain;
+        width: 400px;
+        
+      }
+      .card a{
+       
+        border-color: blue;
+        background-color: rgb(32, 162, 232);
+        border-radius: 5px;
+        padding: 15px;
+        width: 100%;
+        color: black;
+        text-decoration: none;
+        justify-content: center;
+        height: 100%;
+        /* text-transform: lowercase; */
+      }
+
+      .card a:hover{
+        background-color: aqua;
+        transition: ease-out;
+      }
+
+      .card img {
+        align-items: center;
+        border-radius: 20px;
+      }
+
+      .title{
+        color: aliceblue;
+      }
+
+      .button
+      {
+        justify-content: center;
+      }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="web-container">
+        <div class="carousel-wrapper">
+            <div class="page">
+                <img src="../photos/IMG_20240330_184400.jpg" alt="img1" width="300px">
+            </div>
+            <div class="page">
+                <img src="../photos/IMG_20240624_171114_1.jpg" alt="img2" width="300px">
+            </div>
+
+            <button class="previous">
+                <span class="visually-hidden">previous</span>
+            </button>
+            <button class="next">
+                <span class="visually-hidden">next</span>
+            </button>
+
+        </div>
+
+
+        
+        
+    </div>
+    <main>
+        <div class="card-container" style="display: grid; ">
+            <div class="card" style="display: grid;">
+                <img  class="image" src="../photos/IMG_20240624_171114_1.jpg">
+                <span class="title" style="display: block;">Starting A web Dev Journey</h6>
+                <a href="#" class="button" style="display: block;">Watch Now</a>
+            </div>
+            <div class="card" style="display: grid;">
+                <img  class="image" src="../photos/IMG_20240624_171114_1.jpg">
+                <span class="title" style="display: block;">Starting A web Dev Journey</h6>
+                <a href="#" class="button" style="display: block;">Watch Now</a>
+            </div>
+            <div class="card" style="display: grid;">
+                <img  class="image" src="../photos/IMG_20240624_171114_1.jpg">
+                <span class="title" style="display: block;">Starting A web Dev Journey</h6>
+                <a href="#" class="button" style="display: block;">Watch Now</a>
+            </div>
+
+        </div>
+    </main>
+</body>
+
+<footer>
+     <span>All rights reserved Smita Shinde</span>
+</footer>
+
+</html>
