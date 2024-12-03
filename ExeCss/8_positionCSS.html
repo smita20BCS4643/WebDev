@@ -1,0 +1,46 @@
+<html>
+<!--Add your HTML code here-->
+
+<head>
+    <style type="text/css" media="all">
+      .parent-container{
+          background: red;
+          position: relative;
+          width: 400px;
+          height: 400px;
+      }
+      
+      .static-box{
+          position: static;
+          background: yellow;
+          height: 100px;
+          width: 100px;
+      }
+      
+        .relative-box{
+            position: relative;
+            top: 50px;
+            left: 50px;
+            background: blue;
+            width: 100px;
+            height: 100px;
+        }
+        .absolute-box{
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            width: 100px;
+            height: 100px;
+            background: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent-container">
+        <div class="static-box">a</div>
+        <div class="relative-box">b</div>
+        <div class="absolute-box">c</div>
+        
+    </div>
+</body>
+</html>
