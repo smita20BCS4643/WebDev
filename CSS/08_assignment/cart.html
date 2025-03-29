@@ -1,0 +1,133 @@
+<!-- web page having centered box content a image within it background can be any gradient , solid color or an image
+ it should have 2 titles and 2 buttons 
+ 1. btn buy now
+ 2. add to wishlist or cart -->
+
+
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Assignment</title>
+    <style>
+        body{
+            background-color: black;
+            margin: 0%;
+            padding: 0%;
+            font-family: Arial, Helvetica, sans-serif;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            display: flex;
+        }
+        .card{
+            background-color: rgb(195, 209, 190);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 300px;
+            margin: auto;
+            /* margin-left: 400px; */
+            /* margin-top: 200px; */
+        }
+        .card:hover{
+            background-color: rgb(226, 98, 43);
+        }
+
+
+        .cards{
+            margin: 100px;
+            border: #7d1414;
+        }
+        button{
+         background-color: blueviolet;
+         padding: 10px;
+         border-radius: 10px;
+         color: #f2f2f2;
+         margin: 10px;
+         /* align-items: first baseline;
+          */
+          display: flex;
+        }
+
+        .image{
+            object-fit: contain;
+            width: 200px;
+            align-items: center;
+            border-radius: 100px;
+            box-shadow: 20px;
+        }
+
+       
+
+        
+    </style>
+</head>
+
+ <body>
+    <div class="cards">
+
+        <div class="card">
+            <h2>Fantastic Model</h2>
+            <h3>Today's need</h3>
+            <img src="../images/images.jpg" class="image" width="200px" alt="product">
+            <div class="grid-container" style=" grid-template-columns: repeat(2 ,1fr);">
+                <div class="item1" >
+                    <button class="submit"> Buy Now</button>
+                </div>
+                
+                <div class="item2">
+                <button class="submit"> Add to cart</button>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <h2>Fantastic Model</h2>
+        <h3>Today's need</h3>
+        <img src="../images/images.jpg" class="image" width="200px" alt="product">
+        <div class="grid-container" style=" grid-template-columns: repeat(2 ,1fr);">
+            <div class="item1" >
+                <button class="submit"> Buy Now</button>
+            </div>
+            
+            <div class="item2">
+                <button class="submit"> Add to cart</button>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <h2>Fantastic Model</h2>
+        <h3>Today's need</h3>
+        <img src="../images/images.jpg" class="image" width="200px" alt="product">
+        <div class="grid-container" style=" grid-template-columns: repeat(2 ,1fr);">
+            <div class="item1" >
+                <button class="submit"> Buy Now</button>
+            </div>
+            
+            <div class="item2">
+                <button class="submit"> Add to cart</button>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <h2>Fantastic Model</h2>
+        <h3>Today's need</h3>
+        <img src="../images/images.jpg" class="image" width="200px" alt="product">
+        <div class="grid-container" style=" grid-template-columns: repeat(2 ,1fr);">
+            <div class="item1" >
+                <!-- <button class="submit"> Buy Now</button> -->
+                <!-- <input type="button" value="submit"> -->
+                <button type="submit">Login</button>
+                
+            </div>
+            
+            <div class="item2">
+                <button class="submit"> Add to cart</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+ </html>

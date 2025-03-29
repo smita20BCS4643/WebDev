@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0%;
+            padding: 20px;
+            color: white;
+            background-color: #030303;
+        }
+
+        .nav-container {
+            margin-bottom: 40px;
+            background-color: rgb(26, 24, 25);
+        }
+
+       
+    </style>
+
+</head>
+
+<body>
+
+    <!-- section hero -->
+    <section id="hero">
+        <div class="container">
+            <div class="content-box">
+                <h1>Welcome to My Portfolio</h1>
+                <p>I'm a passionate web developer creating beautiful and functional websites.</p>
+                <p>Explore my work and let's create something amazing together.</p>
+            </div>
+            <div class="image-box">
+                <img src="/api/placeholder/400/300" alt="Hero Image 1">
+                <img src="/api/placeholder/400/300" alt="Hero Image 2">
+            </div>
+        </div>
+    </section>
+
+
+    <header>Hello</header>
+    <div class="nav-container">
+        <h2>Portfolio</h2>
+        <nav class="nav">
+            <ul>
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li class="dropdown"> <a href="#">About</a>
+                    <div class="dropdown-content">
+                        <a href="#">Team</a>
+                        <a href="#">Contact</a>
+                    </div>
+                </li>
+                <li><a href="#">Projects</a></li>
+            </ul>
+        </nav>
+    </div>
+  
+    <!-- Navigation Section -->
+    <nav class="navbar">
+        <div class="hamburger">
+            <div></div>
+        </div>
+        <ul class="nav-list">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Projects Section -->
+     <section id="projects">
+        <div class="mx-auto">
+            
+            <h2 style="text-align: center; margin-bottom: 12px; text-decoration: solid;"> Featured Projects</h2>
+            <div class="project-card">
+                <div>
+                    <img src="/api/placeholder/400/300" alt="project 1">
+                    <div class="project-info">
+                        <h3 style="font-weight: bold;">Sky Animation</h3>
+                        <p>Interactive SVG Animantion with dynamic day and night cycle and weather effect</p>
+                         <div>
+                            <a href="#">Live Demo</a>
+                            <a href="#">Source code</a>
+                         </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+     </section>
+
+
+    <!-- contact me Section -->
+    <section id="contact" class="contactme">
+        <div class="container">
+            <h2 class="contact-heading" style="margin-bottom: 12px; font-size: 3xl; text-align: center; font-size: bold; ">Do you have any Question?</h2>
+                
+        </div class="mx-auto">
+        <form>
+            <div style="align-content: center;">
+                <label for="name" style="align-content: center;">Name</label>
+                <input type="text" id="name" class="width-full">
+            </div>
+
+            <div>
+                <label class="block text-grey-700" for="email">Email</label>
+                <input type="email" id="email">
+            </div>
+
+            <div>
+                <label for="message">Message</label>
+                <textarea  id="message" rows="4"></textarea>
+            </div>
+
+                <button type="submit">
+                    Send Message
+                </button>
+            
+        </form>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>© 2024 Smita Shinde. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Excercise</title>
+
+    <style>
+        body{
+           margin: 0;
+           padding: 0;
+            background-color: rgb(190, 188, 187);
+        }
+
+        .container
+        {
+          background-color: rgb(244, 249, 249);
+          border: 2px solid #333;
+          border-radius: 5px;
+          margin: 10px;
+          /* display: flex; */
+        }
+
+        .flex-container
+        {
+            padding: 5px;
+            /* background-color: aliceblue; */
+            height: auto;
+            display: flex;
+        }
+        
+        .square{
+            width: 25px;
+            height: 25px;
+            margin: 5px;
+            padding: 5px;
+        
+        }
+        
+        .pastel-1{
+            
+            background-color: palegreen;
+        }
+        .pastel-2{
+            
+            background-color: rgb(249, 251, 152);
+        }
+        .pastel-3{
+            
+            background-color: rgb(152, 251, 251);
+        }
+        .pastel-4{
+            
+            background-color: rgb(152, 165, 251);
+        }
+        .pastel-5{
+            
+            background-color: rgb(251, 152, 249);
+        }
+
+    </style>
+</head>
+
+<body>
+    
+    <h2>Flexbox Masterclass Exercise</h2>
+
+    <div class="container">
+       <h3>1. Flexbox Direction - Row</h3> 
+        <div class="flex-container" >
+            <div class="square pastel-1">1</div>
+            <div class="square pastel-2">2</div>
+            <div class="square pastel-3">3</div>
+            <div class="square pastel-4">4</div>
+            <div class="square pastel-5">5</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h3>2. Flex Direction - column</h3> 
+         <div class="flex-container" 
+         style="flex-direction: column;">
+             <div class="square pastel-1">1</div>
+             <div class="square pastel-2">2</div>
+             <div class="square pastel-3">3</div>
+             <div class="square pastel-4">4</div>
+             <div class="square pastel-5">5</div>
+         </div>
+     </div>
+
+     <div class="container">
+        <h3>3.Justify Conten: Space</h3> 
+         <div class="flex-container" 
+         style="justify-content: center;">
+             <div class="square pastel-1">1</div>
+             <div class="square pastel-2">2</div>
+             <div class="square pastel-3">3</div>
+             <div class="square pastel-4">4</div>
+             <div class="square pastel-5">5</div>
+         </div>
+         
+     </div>
+ 
+     <div class="container">
+            <h3>4.Align Items :Center</h3> 
+             <div class="flex-container" style="align-items: center;">
+                 <div class="square pastel-1">1</div>
+                 <div class="square pastel-2">2</div>
+                 <div class="square pastel-3">3</div>
+                 <div class="square pastel-4">4</div>
+                 <div class="square pastel-5">5</div>
+             </div>
+         </div>
+
+         <div class="container">
+            <h3>5. Flex Wrap:wrap</h3> 
+             <div class="flex-container" 
+             style="flex-wrap: wrap;">
+                 <div class="square pastel-1">1</div>
+                 <div class="square pastel-2">2</div>
+                 <div class="square pastel-3">3</div>
+                 <div class="square pastel-4">4</div>
+                 <div class="square pastel-5">5</div>
+             </div>
+         </div>
+     
+         <div class="container">
+            <h3>6.Align Content: space Around(with Wrap)</h3> 
+             <div class="flex-container" 
+             style="align-content: space-around; flex-wrap: wrap;">
+                 <div class="square pastel-1">1</div>
+                 <div class="square pastel-2">2</div>
+                 <div class="square pastel-3">3</div>
+                 <div class="square pastel-4">4</div>
+                 <div class="square pastel-5">5</div>
+             </div>
+         </div>
+
+         <div class="container">
+            <h3>7. Order Property</h3> 
+             <div class="flex-container"  >
+                 <div class="square pastel-1" style="order: 1;">1</div>
+                 <div class="square pastel-2" style="order: 2;">2</div>
+                 <div class="square pastel-3" style="order: 3;">3</div>
+                 <div class="square pastel-4" style="order: 1;">4</div>
+                 <div class="square pastel-5" style="order: 2;">5</div>
+             </div>
+         </div>
+
+         <div class="container">
+            <h3>8. Flex Grow</h3> 
+             <div class="flex-container" >
+                 <div class="square pastel-1 "style="flex-grow: 11;">1</div>
+                 <div class="square pastel-2" style="flex-grow: 12;">2</div>
+                 <div class="square pastel-3" style="flex-grow: 12;">3</div>
+                 <div class="square pastel-4" style="flex-grow: 18;">4</div>
+                 <div class="square pastel-5" style="flex-grow: 17;">5</div>
+             </div>
+         </div>
+     
+         <div class="container">
+            <h3>9.Align Self</h3> 
+             <div class="flex-container"  style="align-self: 10;">
+                 <div class="square pastel-1" style="align-self: center; height: 50px;">1</div>
+                 <div class="square pastel-2">2</div>
+                 <div class="square pastel-3">3</div>
+                 <div class="square pastel-4">4</div>
+                 <div class="square pastel-5">5</div>
+             </div>
+         </div>
+     
+     
+     
+     
+ 
+ 
+
+
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smita Shinde - Portfolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/90 backdrop-blur-sm shadow-lg z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <h1 class="text-2xl font-bold text-gray-800">Smita Shinde</h1>
+                <div class="hidden md:flex space-x-6">
+                    <a href="#home" class="text-gray-600 hover:text-gray-900">Home</a>
+                    <a href="#projects" class="text-gray-600 hover:text-gray-900">Projects</a>
+                    <a href="#contact" class="text-gray-600 hover:text-gray-900">Contact</a>
+                </div>
+                <button class="md:hidden text-gray-600 hover:text-gray-900">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div> 
+        </div>
+    </nav>
+
+    <!-- Hero Section with Sky Animation -->
+    <section id="home" class="relative min-h-screen flex items-center">
+        <!-- Animated Sky Background -->
+        <svg class="absolute inset-0 w-full h-full" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice">
+            <defs>
+                <!-- Sky Gradient -->
+                <linearGradient id="skyGradient" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#00B4DB">
+                        <animate attributeName="stop-color" 
+                            values="#00B4DB;#FF512F;#2C3E50;#2C3E50;#00B4DB" 
+                            dur="30s" 
+                            repeatCount="indefinite"/>
+                    </stop>
+                    <stop offset="100%" stop-color="#0083B0">
+                        <animate attributeName="stop-color" 
+                            values="#0083B0;#F09819;#000428;#000428;#0083B0" 
+                            dur="30s" 
+                            repeatCount="indefinite"/>
+                    </stop>
+                </linearGradient>
+
+                <!-- Star -->
+                <circle id="star" r="1" fill="white"/>
+
+                <!-- Bird -->
+                <path id="bird" d="M0,0 Q 5,-5 10,0 Q 15,-5 20,0" stroke="black" fill="none" stroke-width="1">
+                    <animate attributeName="d" 
+                        values="M0,0 Q 5,-5 10,0 Q 15,-5 20,0;M0,0 Q 5,0 10,5 Q 15,0 20,0;M0,0 Q 5,-5 10,0 Q 15,-5 20,0" 
+                        dur="1s" 
+                        repeatCount="indefinite"/>
+                </path>
+            </defs>
+
+            <!-- Background -->
+            <rect width="800" height="600" fill="url(#skyGradient)"/>
+
+            <!-- Stars Group -->
+            <g class="stars">
+                <!-- Generate 50 stars with random positions -->
+                <use href="#star" x="100" y="50">
+                    <animate attributeName="opacity" 
+                        values="0;0;1;1;0" 
+                        dur="30s" 
+                        repeatCount="indefinite"/>
+                </use>
+                <use href="#star" x="200" y="100">
+                    <animate attributeName="opacity" 
+                        values="0;0;1;1;0" 
+                        dur="30s" 
+                        repeatCount="indefinite"/>
+                </use>
+                <!-- Add more stars here with different positions -->
+            </g>
+
+            <!-- Sun/Moon -->
+            <circle cx="400" cy="300" r="40">
+                <animate attributeName="cy" 
+                    values="500;100;100;500;500" 
+                    dur="30s" 
+                    repeatCount="indefinite"/>
+                <animate attributeName="fill" 
+                    values="#FFD700;#FFD700;#FFFFFF;#FFFFFF;#FFD700" 
+                    dur="30s" 
+                    repeatCount="indefinite"/>
+                <animate attributeName="r" 
+                    values="40;40;30;30;40" 
+                    dur="30s" 
+                    repeatCount="indefinite"/>
+            </circle>
+
+            <!-- Birds -->
+            <g class="birds">
+                <!-- Bird 1 -->
+                <use href="#bird" x="0" y="150">
+                    <animate attributeName="x" 
+                        values="-50;850;-50" 
+                        dur="15s" 
+                        repeatCount="indefinite"/>
+                </use>
+                <!-- Bird 2 -->
+                <use href="#bird" x="50" y="180">
+                    <animate attributeName="x" 
+                        values="-50;850;-50" 
+                        dur="14s" 
+                        repeatCount="indefinite"/>
+                </use>
+                <!-- Bird 3 -->
+                <use href="#bird" x="100" y="120">
+                    <animate attributeName="x" 
+                        values="-50;850;-50" 
+                        dur="16s" 
+                        repeatCount="indefinite"/>
+                </use>
+            </g>
+
+            <!-- Clouds -->
+            <g class="clouds" fill="white" opacity="0.8">
+                <path d="M50,100 Q75,75 100,100 T150,100 Q175,75 200,100 T250,100 Q225,125 200,100 T150,100 Q125,125 100,100 T50,100">
+                    <animate attributeName="x" 
+                        values="-200;1000;-200" 
+                        dur="30s" 
+                        repeatCount="indefinite"/>
+                    <animate attributeName="opacity" 
+                        values="0.8;0;0.8" 
+                        dur="30s" 
+                        repeatCount="indefinite"/>
+                </path>
+            </g>
+        </svg>
+
+        <!-- Content -->
+        <div class="relative container mx-auto px-4">
+            <div class="max-w-2xl">
+                <h2 class="text-4xl md:text-6xl font-bold text-white mb-4 drop-shadow-lg">
+                    Hi, I'm Smita Shinde
+                </h2>
+                <p class="text-xl text-white mb-8 drop-shadow-lg">
+                    Frontend Developer & UI/UX Designer
+                </p>
+                <a href="#projects" class="inline-block bg-white/20 backdrop-blur-sm text-white px-8 py-3 rounded-lg hover:bg-white/30 transition">
+                    View My Work
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Featured Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project Card 1 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="/api/placeholder/400/300" alt="Project 1" class="w-full h-48 object-cover"/>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Sky Animation</h3>
+                        <p class="text-gray-600 mb-4">Interactive SVG animation with dynamic day/night cycle and weather effects.</p>
+                        <div class="flex space-x-4">
+                            <a href="#" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Live Demo</a>
+                            <a href="#" class="bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-900">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add more project cards -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Get in Touch</h2>
+            <div class="max-w-lg mx-auto">
+                <form class="space-y-6">
+                    <div>
+                        <label class="block text-gray-700 mb-2" for="name">Name</label>
+                        <input type="text" id="name" class="w-full px-4 py-2 rounded-lg border focus:outline-none focus:border-blue-500"/>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-2" for="email">Email</label>
+                        <input type="email" id="email" class="w-full px-4 py-2 rounded-lg border focus:outline-none focus:border-blue-500"/>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-2" for="message">Message</label>
+                        <textarea id="message" rows="4" class="w-full px-4 py-2 rounded-lg border focus:outline-none focus:border-blue-500"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>© 2024 Smita Shinde. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .testimonial-wrapper {
+      background: linear-gradient(135deg, #f6f8fd 0%, #f1f4f9 100%);
+      padding: 60px 20px;
+      margin: 40px 0;
+      perspective: 1000px; /* Add perspective for 3D effect */
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.5rem;
+      color: #333;
+      margin-bottom: 40px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .carousel-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+
+    .testimonial-section {
+      width: 100%;
+      margin: 0 auto;
+      overflow: hidden;
+      position: relative;
+      transform-style: preserve-3d;
+    }
+
+    .testimonial-container {
+      display: flex;
+      width: 400%;
+      transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+      transform-style: preserve-3d;
+    }
+
+    .testimonial-card {
+      width: 25%;
+      min-height: 400px;
+      padding: 40px 30px;
+      text-align: center;
+      background: white;
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(5px);
+      background: rgba(255, 255, 255, 0.95);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      transform: scale(0.9);
+      transition: all 0.5s ease;
+    }
+
+    .testimonial-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: 20px;
+      background: linear-gradient(45deg, rgba(255,255,255,0.1), rgba(255,255,255,0.5));
+      z-index: 1;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+
+    .testimonial-card:hover {
+      transform: scale(0.95) translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .testimonial-card:hover::before {
+      opacity: 1;
+    }
+
+    .testimonial-img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin: 0 auto 25px;
+      display: block;
+      object-fit: cover;
+      border: 4px solid #fff;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      transform: translateZ(30px);
+      transition: transform 0.5s ease;
+    }
+
+    .testimonial-card:hover .testimonial-img {
+      transform: translateZ(50px);
+    }
+
+    .testimonial-name {
+      font-size: 1.5rem;
+      color: #333;
+      margin: 15px 0;
+      font-weight: bold;
+      transform: translateZ(20px);
+      transition: transform 0.5s ease;
+    }
+
+    .testimonial-text {
+      font-size: 1.1rem;
+      color: #666;
+      line-height: 1.8;
+      max-width: 80%;
+      margin: 0 auto;
+      transform: translateZ(10px);
+      transition: transform 0.5s ease;
+    }
+
+    /* Radio buttons */
+    input[type="radio"] {
+      display: none;
+    }
+
+    /* Navigation dots with 3D effect */
+    .nav-dots {
+      text-align: center;
+      margin-top: 30px;
+      transform-style: preserve-3d;
+    }
+
+    .nav-dots label {
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: linear-gradient(145deg, #e6e6e6, #ffffff);
+      margin: 0 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1),
+                  -3px -3px 6px rgba(255, 255, 255, 0.8);
+    }
+
+    .nav-dots label:hover {
+      transform: scale(1.2) translateZ(10px);
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15),
+                  -5px -5px 10px rgba(255, 255, 255, 0.9);
+    }
+
+    /* Slide movement with 3D effect */
+    #slide1:checked ~ .testimonial-section .testimonial-container {
+      transform: translateX(0) translateZ(-50px);
+    }
+
+    #slide2:checked ~ .testimonial-section .testimonial-container {
+      transform: translateX(-25%) translateZ(-50px);
+    }
+
+    #slide3:checked ~ .testimonial-section .testimonial-container {
+      transform: translateX(-50%) translateZ(-50px);
+    }
+
+    #slide4:checked ~ .testimonial-section .testimonial-container {
+      transform: translateX(-75%) translateZ(-50px);
+    }
+
+    /* Active card and dot */
+    #slide1:checked ~ .testimonial-section .testimonial-container .testimonial-card:nth-child(1),
+    #slide2:checked ~ .testimonial-section .testimonial-container .testimonial-card:nth-child(2),
+    #slide3:checked ~ .testimonial-section .testimonial-container .testimonial-card:nth-child(3),
+    #slide4:checked ~ .testimonial-section .testimonial-container .testimonial-card:nth-child(4) {
+      transform: scale(1) translateZ(50px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    }
+
+    #slide1:checked ~ .nav-dots label[for="slide1"],
+    #slide2:checked ~ .nav-dots label[for="slide2"],
+    #slide3:checked ~ .nav-dots label[for="slide3"],
+    #slide4:checked ~ .nav-dots label[for="slide4"] {
+      background: linear-gradient(145deg, #333, #666);
+      transform: scale(1.3) translateZ(20px);
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2),
+                  -5px -5px 10px rgba(255, 255, 255, 1);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 1024px) {
+      .testimonial-card {
+        min-height: 380px;
+        padding: 30px 25px;
+      }
+
+      .testimonial-img {
+        width: 100px;
+        height: 100px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .testimonial-wrapper {
+        padding: 40px 15px;
+        perspective: 800px;
+      }
+
+      .testimonial-card {
+        min-height: 340px;
+        padding: 25px 20px;
+      }
+
+      .testimonial-img {
+        width: 90px;
+        height: 90px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .testimonial-wrapper {
+        padding: 30px 10px;
+        perspective: 600px;
+      }
+
+      .testimonial-card {
+        min-height: 300px;
+        padding: 20px 15px;
+      }
+
+      .testimonial-img {
+        width: 80px;
+        height: 80px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Rest of the HTML remains the same as in the previous example -->
+  <div class="testimonial-wrapper">
+    <h2 class="section-title">What People Say</h2>
+    <div class="carousel-wrapper">
+      <!-- Radio Buttons -->
+      <input type="radio" name="slider" id="slide1" checked>
+      <input type="radio" name="slider" id="slide2">
+      <input type="radio" name="slider" id="slide3">
+      <input type="radio" name="slider" id="slide4">
+
+      <div class="testimonial-section">
+        <div class="testimonial-container">
+          <!-- First Testimonial -->
+          <div class="testimonial-card">
+            <img src="/api/placeholder/120/120" alt="John Doe" class="testimonial-img">
+            <h3 class="testimonial-name">John Doe</h3>
+            <p class="testimonial-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
+          </div>
+
+          <!-- Second Testimonial -->
+          <div class="testimonial-card">
+            <img src="/api/placeholder/120/120" alt="Jane Smith" class="testimonial-img">
+            <h3 class="testimonial-name">Jane Smith</h3>
+            <p class="testimonial-text">"Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</p>
+          </div>
+
+          <!-- Third Testimonial -->
+          <div class="testimonial-card">
+            <img src="/api/placeholder/120/120" alt="Mike Johnson" class="testimonial-img">
+            <h3 class="testimonial-name">Mike Johnson</h3>
+            <p class="testimonial-text">"Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."</p>
+          </div>
+
+          <!-- Fourth Testimonial -->
+          <div class="testimonial-card">
+            <img src="/api/placeholder/120/120" alt="Sarah Williams" class="testimonial-img">
+            <h3 class="testimonial-name">Sarah Williams</h3>
+            <p class="testimonial-text">"Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation Dots -->
+      <div class="nav-dots">
+        <label for="slide1"></label>
+        <label for="slide2"></label>
+        <label for="slide3"></label>
+        <label for="slide4"></label>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
