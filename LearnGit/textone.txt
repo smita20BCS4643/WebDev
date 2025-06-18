@@ -10,5 +10,14 @@
     
     git add --> git commit --> git push
 
-7. "git add ./ " - it will add all the files 
-git add. it will add only single file
+7. "git add ./ " and "git add." - it will add all the files 
+
+8.  "git add textone.txt" it will add only single file.
+
+9. now git commit --> we have to write it git commit -m "description of commit or msg"
+
+    so here -m stands for message and in quotes need to write message
+
+10. if we just write "git commit" or forgot to add -m it will open vim
+     
+     qa! or esc+:+Q and 
