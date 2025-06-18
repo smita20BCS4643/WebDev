@@ -1,0 +1,14 @@
+1. for the very first we have to create one empty folder
+2. then check for "git status" ( it doesn't show main or master branch)
+  "git status is the command we are going to run everytime to check the status of repo"
+3. because we haven't initialized our repositiory
+4. so we have to run "git init" to initialize it
+   " git init" is the command run only once at starting of repositiory.
+
+5. after that we have to create files (touch textone.txt is the first empty file is created)
+6.  then we need to follow the sequence 
+    
+    git add --> git commit --> git push
+
+7. "git add ./ " - it will add all the files 
+git add. it will add only single file
