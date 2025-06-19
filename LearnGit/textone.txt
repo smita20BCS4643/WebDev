@@ -41,3 +41,11 @@
     git config --global core.editior "code --wait"
 
     this will help to configure vs code editior and wait for few seconds 
+
+
+17. .gitignore we have to create this file 
+   so "touch .gitignore" 
+   this is used to keep safe all the infomartion regarding api keys and variables 
+
+   .gitignore don't track files and folders when we mention it
+   
