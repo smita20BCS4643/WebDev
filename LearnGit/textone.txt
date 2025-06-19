@@ -95,3 +95,8 @@ in both branches before merging it
  # then do the merge operation
 
  after megre we need to commit it and boom it will merge the branch
+
+
+25. delete the branch
+    git branch -d nav-bar
+    it will delete the branch 
