@@ -65,13 +65,11 @@
      "git branch"  -- it will show the which branch are u working right now
 
 
-<<<<<<< HEAD
 20. how to create another branch nav-bar
 git branch nav-bar -- it will create new branch named nav-bar
 
 21. how to move from one branch to another
   git checkout nav-bar -- it will change the branch
-=======
 
 
 
@@ -83,7 +81,6 @@ and in nav-bar branch created nav-bar.html file
 when we switch 
 git checkout main -- it doesn't show the nav-bar file
 and in nav-bar it doesn't show index and head section files
->>>>>>> nav-bar
 
 
 23. now in the end commit everything what changes we have made so far
