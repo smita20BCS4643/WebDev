@@ -84,3 +84,14 @@ when we switch
 git checkout main -- it doesn't show the nav-bar file
 and in nav-bar it doesn't show index and head section files
 >>>>>>> nav-bar
+
+
+23. now in the end commit everything what changes we have made so far
+in both branches before merging it
+
+24. merge -- git merge nav-bar
+ # make sure u are on correct branch before merge
+ # check it using git branch and if not in master or main switch the branch
+ # then do the merge operation
+
+ after megre we need to commit it and boom it will merge the branch
