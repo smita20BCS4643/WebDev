@@ -21,3 +21,12 @@
 10. if we just write "git commit" or forgot to add -m it will open vim
      
      qa! or esc+:+Q and 
+
+11. now if you haven't see the email or name u have to configure that using commands
+
+12. config --global user.name "username" // in my case it will because
+      config --global user.name "smita20BCS4643"
+
+13. another is email so config --global user.email "email@gmail.com"
+
+     config --global user.email "smitash3011@gmail.com"
