@@ -97,3 +97,16 @@ in both branches before merging it
 25. delete the branch
     git branch -d nav-bar
     it will delete the branch 
+
+26. we had deleted the branch but we made a confilt before which looks like 
+editior choices - accept the current change |Accept the incoming change | accept both
+<<<<<<<<<< HEAD(current change)
+  the change u made first 
+
+=======================
+  the change u made 2nd time
+
+  >>>>>>>>>>>>>>>> nav-bar(Incoming change)
+
+  so we simply delete which is not require save it as per our choices
+  i do think both were required so i selected accept the both and comitted it.
