@@ -54,3 +54,8 @@
    so in tracking in red color it will show the names
    .env file
    but onces name of .env added in gitignore file it will become hide didn't show there. 
+
+
+18. when we did config stored username and email how to see that file
+
+   cat .gitconfig
