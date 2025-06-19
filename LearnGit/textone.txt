@@ -30,3 +30,7 @@
 13. another is email so config --global user.email "email@gmail.com"
 
      config --global user.email "smitash3011@gmail.com"
+
+14. we can use "git log" command to check the history of all work of commits
+
+15. to get back after using git log press "q" it will get back to pwd(working directory)
