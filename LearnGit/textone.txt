@@ -69,3 +69,4 @@
 git branch nav-bar -- it will create new branch named nav-bar
 
 21. how to move from one branch to another
+  git checkout nav-bar -- it will change the branch
