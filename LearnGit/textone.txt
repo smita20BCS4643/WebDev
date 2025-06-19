@@ -59,3 +59,7 @@
 18. when we did config stored username and email how to see that file
 
    cat .gitconfig
+
+
+19. Now we are going to learn about the branching 
+     "git branch"  -- it will show the which branch are u working right now
