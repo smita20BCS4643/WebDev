@@ -48,4 +48,9 @@
    this is used to keep safe all the infomartion regarding api keys and variables 
 
    .gitignore don't track files and folders when we mention it
-   
+
+   in our case before commiting or adding gitignore we have to mention the name
+
+   so in tracking in red color it will show the names
+   .env file
+   but onces name of .env added in gitignore file it will become hide didn't show there. 
