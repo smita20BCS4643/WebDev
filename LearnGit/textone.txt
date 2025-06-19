@@ -32,6 +32,7 @@
      git config --global user.email "smitash3011@gmail.com"
 
 14. we can use "git log" command to check the history of all work of commits
+        git log --oneline (gives one line result)
 
 15. to get back after using git log press "q" it will get back to pwd(working directory)
 
