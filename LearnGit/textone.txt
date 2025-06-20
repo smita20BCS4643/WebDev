@@ -110,3 +110,8 @@ editior choices - accept the current change |Accept the incoming change | accept
 
   so we simply delete which is not require save it as per our choices
   i do think both were required so i selected accept the both and comitted it.
+
+27. git diff --
+  this command tell the difference within same file
+  not between two files a and b
+  it will show only a , and it shows the version of file in x time and y time
