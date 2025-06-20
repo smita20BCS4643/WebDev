@@ -115,3 +115,15 @@ editior choices - accept the current change |Accept the incoming change | accept
   this command tell the difference within same file
   not between two files a and b
   it will show only a , and it shows the version of file in x time and y time
+
+28. when it shows ++++ and ----- it doesn't mean that added and removed 
+something 
+it means a file  and b file where new modidification shows + in front of it.
+
+29. to check git diff of file 
+we have to do some changes in existing file
+the git add tfile.format
+then git diff file.format
+and then git diff --staged 
+will show the output.
+
