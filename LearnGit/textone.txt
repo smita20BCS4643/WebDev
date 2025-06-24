@@ -129,6 +129,10 @@ will show the output.(which changed we had made them )
 
 30 Rebase -
   Main / master branch -- in these two branches it never meant to run this command. 
-  it should be run on side branch --it should run from that branch itself not main or master 
+  it should be run on side branch --it should run from that branch itself not main or master ''
+
+31 we can add and commit in single line using the commands
+git commit -am "text"
+
 
   
