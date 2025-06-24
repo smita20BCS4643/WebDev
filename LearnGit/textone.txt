@@ -125,5 +125,10 @@ we have to do some changes in existing file
 the git add tfile.format
 then git diff file.format
 and then git diff --staged 
-will show the output.
+will show the output.(which changed we had made them )
 
+30 Rebase -
+  Main / master branch -- in these two branches it never meant to run this command. 
+  it should be run on side branch --it should run from that branch itself not main or master 
+
+  
