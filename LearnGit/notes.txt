@@ -1,0 +1,5 @@
+git init = to initialize the repository 
+git remote -v = to check the local repository have any remote location
+if it's empty - means no connection
+it it's not empty - give u result
+git remote add name url (if we want to add)
