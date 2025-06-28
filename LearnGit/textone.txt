@@ -134,6 +134,9 @@ will show the output.(which changed we had made them )
 31 we can add and commit in single line using the commands
 git commit -am "text"
 
-32. 
+32. git rebase it alternative to merging and used to clean up tool(clean up commits)
+this command is not meant to run from any master or main branch
+
+we have to do it from side branch
 
   
