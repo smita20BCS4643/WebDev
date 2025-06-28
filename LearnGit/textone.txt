@@ -134,5 +134,6 @@ will show the output.(which changed we had made them )
 31 we can add and commit in single line using the commands
 git commit -am "text"
 
+32. 
 
   
