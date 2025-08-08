@@ -1,1 +1,0 @@
-console.log("Smita first Js code")
