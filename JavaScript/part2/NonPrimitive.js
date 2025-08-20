@@ -28,3 +28,20 @@ console.log((usernameConst.lastname));
 
 let today = new Date();
 console.log(today);
+
+// Array
+
+let heros = ["a","b","c", true]
+let anotherusrr = ["smiya", "fksjf", true]
+
+console.log(anotherusrr[0]);
+
+console.log(1 + '1');
+console.log(1 + 1);
+console.log("1" + 1);
+
+let isvalur = "23ads";
+console.log(isvalur * 2); // NaN (Not a Number)
+log(typeof(isvalur * 2)); // number
+
+  
