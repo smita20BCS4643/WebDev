@@ -41,3 +41,11 @@ fetchData()
       
     
        })
+
+    
+    // rules need to consider
+    // promises always defined by new keyword follwing Promise word
+    // new Promise 
+    // it takes a callback which is actually takes two parameters __ Resolve and Reject
+    // if true then resolve if not then reject -- along with parametors or values passed
+    //.then -- it linked with resolve while .catch linked with reject
